@@ -30,7 +30,7 @@ class ChatBotManager
     {
         $context = $this->resolveContext();
 
-        $prompt = (string)view('chat-bot::ask.query', [
+        $prompt = (string)view('chat-bot::prompts.ask', [
             'question' => $question,
             'context' => $context,
         ]);
