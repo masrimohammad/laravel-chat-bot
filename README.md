@@ -23,7 +23,7 @@ Open the file and update include the following array somewhere in the object:
 ```
 
 ```bash
-composer require ai/chat-bot
+composer require ai/chatbot
 ```
 
 You can publish the config file with:
@@ -50,7 +50,7 @@ return [
      * The context you would like to feed your AI bot with so that
      * customers can interact with the bot based on
      *
-     * make sure that this env param resolves to a path in which you host the context file as a txt file 
+     * make sure that this env param resolves to the public path in which you host the context file as a txt file 
      */
     'context_path' => env('CHAT_BOT_CONTEXT_PATH'),
 ];
@@ -62,7 +62,7 @@ First, you need to configure your OpenAI API key in your `.env` file:
 
 ```dotenv
 CHAT_BOT_OPEN_AI_API_KEY=sk-...
-CHAT_BOT_CONTEXT_PATH=../../context.txt
+CHAT_BOT_CONTEXT_PATH=context.txt
 ```
 
 Then, you can use the `ChatBot::ask()` method to ask the chat-bot:

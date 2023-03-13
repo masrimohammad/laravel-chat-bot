@@ -40,8 +40,8 @@ class ChatBotManager
 
     protected function resolveContext(): string
     {
-        if (file_exists($this->contextPath)) {
-            return file_get_contents($this->contextPath);
+        if (file_exists(public_path($this->contextPath))) {
+            return file_get_contents(public_path($this->contextPath));
         } else {
             return "";
         }
