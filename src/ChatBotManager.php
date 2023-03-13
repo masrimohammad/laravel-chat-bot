@@ -53,8 +53,7 @@ class ChatBotManager
             'model' => 'text-davinci-003',
             'prompt' => $prompt,
             'temperature' => $temperature,
-            'max_tokens' => 100,
-            'stop' => $stop,
+            'max_tokens' => 500,
         ]);
         $completions = json_decode($completions);
 
