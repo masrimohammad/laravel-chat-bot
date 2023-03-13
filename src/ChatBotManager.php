@@ -19,7 +19,7 @@ class ChatBotManager
     public function ask(string $question): string
     {
         $prompt = $this->buildPrompt($question);
-        $answer = $this->queryOpenAi($prompt, "\n", 0.5);
+        $answer = $this->queryOpenAi($prompt, "\n", 0.7);
 
         return Str::of($answer)
             ->trim()
