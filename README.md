@@ -1,6 +1,6 @@
 # Laravel Chat Bot:
 This package allows you to build a chat-bot based on a context that you provide helping your users understand how your system operates, powered OpenAI's GPT-3.
-Keep in mind that the more you describe under the context, the more your reliable your chat-bot will be
+Keep in mind that the more you describe under the context, the more reliable your chat-bot will be
 
 ```php
 $chatBot = new ChatBot();
