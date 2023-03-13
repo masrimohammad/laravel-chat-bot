@@ -1,0 +1,38 @@
+{
+    "name": "ai/chatbot",
+    "description": "Chat Bot allows you to easily build a chat bot powered by AI based on a context you provide",
+    "keywords": ["laravel", "chatgpt", "openai", "chat", "customers", "chatbot", "context-prompt"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ChatBot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamad Masri",
+            "email": "mdjbugz@gmail.com"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --tag=chat-bot --force"
+        ]
+    },
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+        "orhanerday/open-ai": "^3.5"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChatBot\\Providers\\ChatBotServiceProvider"
+            ]
+        }
+    }
+}
